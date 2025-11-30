@@ -604,9 +604,116 @@ footer {
         font-size: 14px;
         padding: 8px;
     }
+    /* ... Ваш предыдущий код CSS до секции адаптивности ... */
+
+/* ======================================= */
+/* ====== АДАПТИВНОСТЬ (MEDIA QUERIES) ====== */
+/* ======================================= */
+
+/* ... Блоки @media (max-width: 1500px) и @media (max-width: 1200px) остаются без изменений ... */
+
+/* Для экранов меньше 850px (планшеты) */
+@media (max-width: 850px) {
+    /* Секции ввода */
+    .input-section, .quick-add-section {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    /* Секция списка */
+    .container-list-section {
+        width: 95%;
+    }
+    .medication-list-content {
+        padding: 20px;
+    }
+    .pill-item {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .pill-info {
+        gap: 15px;
+        margin-bottom: 10px;
+        width: 100%; /* Убедимся, что информация занимает всю ширину */
+    }
+    .pill-name {
+        font-size: 20px;
+        flex: auto; 
+    }
+    .pill-controls {
+        width: 100%; 
+        justify-content: space-between;
+    }
+    /* Слегка уменьшим отступы для кнопок на планшетах */
+    .take-pill-btn, .reset-pill-btn, .delete-pill-btn, .info-pill-btn {
+        flex: 1; 
+        text-align: center;
+        padding: 8px 10px; /* Уменьшаем вертикальный padding */
+        font-size: 14px; /* Уменьшаем шрифт */
+    }
+}
+
+/* Для экранов меньше 600px (мобильные телефоны) */
+@media (max-width: 600px) {
+    .mainbody {
+        margin: 15px auto;
+        padding-bottom: 30px;
+        border-radius: 20px;
+    }
+    .maintext {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .maintextcontainer {
+        height: 150px;
+        border-radius: 20px;
+    }
+
+    /* Форма ввода */
+    .input-section {
+        flex-direction: column;
+    }
+    #dailyCountInput {
+        flex: auto; 
+    }
+    #addPillBtn {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    /* Быстрое добавление */
+    .quick-add-section h3 {
+        font-size: 16px;
+    }
+    .quick-add-buttons {
+        gap: 10px;
+    }
+    .quick-add-btn {
+        flex-basis: calc(50% - 15px); 
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    /* КНОПКИ В СПИСКЕ ЛЕКАРСТВ (ИСПРАВЛЕНИЕ) */
+    .take-pill-btn, .reset-pill-btn, .delete-pill-btn, .info-pill-btn {
+        flex: 1; 
+        text-align: center;
+        padding: 6px 4px; /* Сильно уменьшаем padding */
+        font-size: 12px; /* Сильно уменьшаем шрифт */
+        margin: 2px; /* Добавляем небольшой внешний отступ между кнопками */
+    }
+
+    /* Футер */
+    footer {
+        padding-right: 20px;
+    }
+}
     
     /* Футер */
     footer {
         padding-right: 20px;
     }
+
 }
