@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pill Reminder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="app.js" defer></script>
+  <link rel="icon" type="image/png" href="img/i.webp"> 
+  </head>
+<body>
+  <header>
+    <div class="container-topbar">
+      <h1 class="header-title">PILL INTAKE</h1>
+      <button class="burger">
+        <img src="img/крутка.png" class="topbarimg3" alt="Menu" height="100">
+      </button>
+      
+      <nav class="nav" id="nav">
+        <a href="#">Made by ©YinYui</a>
+        <button id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="mainbody">
+    <div class="maintextcontainer">
+      <div class="maintext">
+        Manage your <span class="maintextr">medication</span>
+      </div>
+    </div>
+    
+    <div class="quick-add-section">
+      <h3>Quick Add Vitamins:</h3>
+      <div class="quick-add-buttons">
+        <button class="quick-add-btn" data-name="Vitamin D" data-dose="1">Vitamin D</button>
+        <button class="quick-add-btn" data-name="Vitamin C" data-dose="1">Vitamin C</button>
+        <button class="quick-add-btn" data-name="Omega-3" data-dose="2">Omega-3</button>
+        <button class="quick-add-btn" data-name="Magnesium" data-dose="1">Magnesium</button>
+        <button class="quick-add-btn" data-name="Vitamin B Complex" data-dose="1">Vitamin B Complex</button>
+        <button class="quick-add-btn" data-name="Iron" data-dose="1">Iron</button>
+      </div>
+    </div>
+
+    <div class="container-input-section wide-input-section">
+      <h3>Add Custom Pill:</h3>
+      <div class="input-section">
+        <input type="text" id="pillNameInput" placeholder="Pill name (e.g., Aspirin)">
+        <input type="number" id="dailyCountInput" placeholder="Daily dose (e.g., 2)" min="1">
+        <button id="addPillBtn">+</button>
+      </div>
+    </div>
+
+    <div class="container-list-section">
+      <div class="pill-list-header">
+        <div class="card-title-text">My Medications</div>
+      </div>
+      <div id="medicationList" class="medication-list-content">
+        </div>
+    </div>
+
+  </div>
+
+  <div id="infoModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <h2 id="modalTitle" class="modal-title"></h2>
+      
+      <div class="modal-info-section">
+        <h4 class="modal-subtitle">Time to Take:</h4>
+        <p id="modalTime" class="modal-text"></p>
+      </div>
+
+      <div class="modal-info-section">
+        <h4 class="modal-subtitle">Advice:</h4>
+        <p id="modalAdvice" class="modal-text"></p>
+      </div>
+
+      <div class="modal-info-section">
+        <h4 class="modal-subtitle">Description:</h4>
+        <p id="modalDescription" class="modal-text"></p>
+      </div>
+      
+      <p class="modal-warning">⚠️ IMPORTANT: Always consult your doctor before taking supplements.</p>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footertext">©YinYui</div>
+  </footer>
+</body>
+</html>
